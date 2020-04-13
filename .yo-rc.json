@@ -1,0 +1,50 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "io.github.pascalgrimaud.katovi"
+    },
+    "jhipsterVersion": "6.8.0",
+    "applicationType": "monolith",
+    "baseName": "Katovi",
+    "packageName": "io.github.pascalgrimaud.katovi",
+    "packageFolder": "io/github/pascalgrimaud/katovi",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MTllODVmZWE3M2I5ZmI3ZTMzY2VlN2NjZjcxOTlmZDQ0ZDM5M2UwN2M3OTViZTYxNTg2Y2U4ZGJkMmFjNTliZDFkYzhmNjkyZjBmMjVlNWMyYTdhNmZjMGNkYjZlZDBlOTUyMzVjNjAxNzlkNzZjYzhhYThmNDZkMzgzMjFjMDI=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "vue",
+    "clientTheme": "pulse",
+    "clientThemeVariant": "primary",
+    "creationTimestamp": 1586774630649,
+    "testFrameworks": ["protractor"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-vuejs",
+        "version": "1.7.0"
+      }
+    ],
+    "enableTranslation": false,
+    "blueprints": [
+      {
+        "name": "generator-jhipster-vuejs",
+        "version": "1.7.0"
+      }
+    ]
+  }
+}
