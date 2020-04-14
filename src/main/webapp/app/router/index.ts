@@ -25,6 +25,18 @@ const JhiLogsComponent = () => import('../admin/logs/logs.vue');
 const JhiAuditsComponent = () => import('../admin/audits/audits.vue');
 const JhiMetricsComponent = () => import('../admin/metrics/metrics.vue');
 /* tslint:disable */
+// prettier-ignore
+const Message = () => import('../entities/message/message.vue');
+// prettier-ignore
+const MessageUpdate = () => import('../entities/message/message-update.vue');
+// prettier-ignore
+const MessageDetails = () => import('../entities/message/message-details.vue');
+// prettier-ignore
+const Topic = () => import('../entities/topic/topic.vue');
+// prettier-ignore
+const TopicUpdate = () => import('../entities/topic/topic-update.vue');
+// prettier-ignore
+const TopicDetails = () => import('../entities/topic/topic-details.vue');
 // jhipster-needle-add-entity-to-router-import - JHipster will import entities to the router here
 
 Vue.use(Router);
@@ -141,6 +153,56 @@ export default new Router({
       name: 'JhiConfigurationComponent',
       component: JhiConfigurationComponent,
       meta: { authorities: [Authority.ADMIN] }
+    }
+    ,
+    {
+      path: '/message',
+      name: 'Message',
+      component: Message,
+      meta: { authorities: [Authority.USER] }
+    },
+    {
+      path: '/message/new',
+      name: 'MessageCreate',
+      component: MessageUpdate,
+      meta: { authorities: [Authority.USER] }
+    },
+    {
+      path: '/message/:messageId/edit',
+      name: 'MessageEdit',
+      component: MessageUpdate,
+      meta: { authorities: [Authority.USER] }
+    },
+    {
+      path: '/message/:messageId/view',
+      name: 'MessageView',
+      component: MessageDetails,
+      meta: { authorities: [Authority.USER] }
+    }
+    ,
+    {
+      path: '/topic',
+      name: 'Topic',
+      component: Topic,
+      meta: { authorities: [Authority.USER] }
+    },
+    {
+      path: '/topic/new',
+      name: 'TopicCreate',
+      component: TopicUpdate,
+      meta: { authorities: [Authority.USER] }
+    },
+    {
+      path: '/topic/:topicId/edit',
+      name: 'TopicEdit',
+      component: TopicUpdate,
+      meta: { authorities: [Authority.USER] }
+    },
+    {
+      path: '/topic/:topicId/view',
+      name: 'TopicView',
+      component: TopicDetails,
+      meta: { authorities: [Authority.USER] }
     }
     // jhipster-needle-add-entity-to-router - JHipster will add entities to the router here
   ]

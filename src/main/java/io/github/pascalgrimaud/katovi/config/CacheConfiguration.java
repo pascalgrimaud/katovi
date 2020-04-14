@@ -40,6 +40,8 @@ public class CacheConfiguration {
             createCache(cm, io.github.pascalgrimaud.katovi.domain.User.class.getName());
             createCache(cm, io.github.pascalgrimaud.katovi.domain.Authority.class.getName());
             createCache(cm, io.github.pascalgrimaud.katovi.domain.User.class.getName() + ".authorities");
+            createCache(cm, io.github.pascalgrimaud.katovi.domain.Message.class.getName());
+            createCache(cm, io.github.pascalgrimaud.katovi.domain.Topic.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

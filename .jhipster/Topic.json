@@ -1,0 +1,41 @@
+{
+    "name": "Topic",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "active",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "keyDeserializer",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "valueDeserializer",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "groupId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "offset",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200414115000",
+    "entityTableName": "topic",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
