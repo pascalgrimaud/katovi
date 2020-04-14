@@ -45,6 +45,7 @@
         "name": "generator-jhipster-vuejs",
         "version": "1.7.0"
       }
-    ]
+    ],
+    "skipFakeData": true
   }
 }
