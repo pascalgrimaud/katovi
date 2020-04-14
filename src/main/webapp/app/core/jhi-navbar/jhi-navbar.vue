@@ -117,6 +117,10 @@
   font-size: 10px;
 }
 
+/* pascalgrimaud-custom */
+.navbar {
+  padding: 0.5rem !important;
+}
 
 @media screen and (min-width: 768px) {
   .jh-navbar-toggler {
