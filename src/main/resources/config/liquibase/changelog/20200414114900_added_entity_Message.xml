@@ -18,7 +18,7 @@
             <column name="date" type="datetime">
                 <constraints nullable="true" />
             </column>
-            <column name="value" type="varchar(255)">
+            <column name="value" type="jsonb">
                 <constraints nullable="true" />
             </column>
             <column name="topic_id" type="bigint">

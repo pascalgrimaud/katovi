@@ -36,8 +36,8 @@ public class MessageResourceIT {
     private static final Instant DEFAULT_DATE = Instant.ofEpochMilli(0L);
     private static final Instant UPDATED_DATE = Instant.now().truncatedTo(ChronoUnit.MILLIS);
 
-    private static final String DEFAULT_VALUE = "AAAAAAAAAA";
-    private static final String UPDATED_VALUE = "BBBBBBBBBB";
+    private static final String DEFAULT_VALUE = "{\"key\":\"AAAAAAAAAA\"}";
+    private static final String UPDATED_VALUE = "{\"key\":\"BBBBBBBBBB\"}";
 
     @Autowired
     private MessageRepository messageRepository;

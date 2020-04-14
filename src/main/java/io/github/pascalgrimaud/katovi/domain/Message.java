@@ -1,6 +1,7 @@
 package io.github.pascalgrimaud.katovi.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
@@ -8,6 +9,8 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 
 /**
  * A Message.
@@ -15,6 +18,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @Entity
 @Table(name = "message")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+@TypeDef(name = "jsonb", typeClass = JsonBinaryType.class)
 public class Message implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -26,7 +30,8 @@ public class Message implements Serializable {
     @Column(name = "date")
     private Instant date;
 
-    @Column(name = "value")
+    @Type(type = "jsonb")
+    @Column(name = "value", columnDefinition = "jsonb")
     private String value;
 
     @ManyToOne(optional = false)
